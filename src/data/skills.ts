@@ -1,0 +1,26 @@
+import { Skill } from "@/types"
+
+export const skills: Skill[] = [
+  { name: "Meta Ads Manager", level: 95, category: "Paid Advertising" },
+  { name: "Facebook Ads", level: 95, category: "Paid Advertising" },
+  { name: "Instagram Ads", level: 92, category: "Paid Advertising" },
+  { name: "Google Ads", level: 90, category: "Paid Advertising" },
+  { name: "TikTok Ads", level: 85, category: "Paid Advertising" },
+  { name: "LinkedIn Ads", level: 80, category: "Paid Advertising" },
+  { name: "SEO Strategy", level: 88, category: "Organic Marketing" },
+  { name: "Content Strategy", level: 90, category: "Organic Marketing" },
+  { name: "Blogging", level: 85, category: "Organic Marketing" },
+  { name: "Email Marketing", level: 82, category: "Organic Marketing" },
+  { name: "Canva", level: 92, category: "Design" },
+  { name: "Adobe Photoshop", level: 78, category: "Design" },
+  { name: "Figma", level: 75, category: "Design" },
+  { name: "CapCut", level: 88, category: "Design" },
+  { name: "Google Analytics 4", level: 92, category: "Analytics" },
+  { name: "Meta Events Manager", level: 90, category: "Analytics" },
+  { name: "Google Tag Manager", level: 88, category: "Analytics" },
+  { name: "Microsoft Clarity", level: 82, category: "Analytics" },
+  { name: "ChatGPT", level: 90, category: "AI Tools" },
+  { name: "Midjourney", level: 85, category: "AI Tools" },
+  { name: "Claude", level: 88, category: "AI Tools" },
+  { name: "Gemini", level: 80, category: "AI Tools" },
+]

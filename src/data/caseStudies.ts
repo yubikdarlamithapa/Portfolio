@@ -1,0 +1,56 @@
+import { CaseStudy } from "@/types"
+
+export const caseStudies: CaseStudy[] = [
+  {
+    slug: "fashion-ecommerce-scale",
+    title: "Scaling a Fashion E-commerce Brand from $50K to $240K Monthly Revenue",
+    client: "TrendyThreads Fashion",
+    industry: "Fashion Retail",
+    problem: "TrendyThreads was spending $30K/month on Meta Ads but only generating $63K in revenue (2.1x ROAS). Their ad account had a damaged pixel, poor audience targeting was wasting 40% of budget, and creative fatigue led to declining CTRs.",
+    research: "Analyzed 6 months of historical data, conducted audience surveys, and performed competitive analysis of 15 competitor brands. Identified key opportunities in retargeting, dynamic product ads, and lookalike audiences from purchase data.",
+    audience: "Women 25-45 interested in sustainable fashion, with lookalikes built from high-LTV customer data. Segmented by purchase behaviour: new customers, repeat buyers, and lapsed customers with tailored messaging for each.",
+    campaignStructure: "Multi-layer campaign structure: Prospecting (broad + interest), Retargeting (website visitors + add-to-cart), and Retention (existing customers). Dynamic product ads for catalog sales, Advantage+ shopping for scaling.",
+    creativeStrategy: "15+ creative variations tested weekly including UGC-style videos, professional lifestyle shoots, and product focus. Top performers were scaled while underperformers were paused within 48 hours.",
+    budget: "Started at $30K/month, scaled to $55K/month as ROAS improved. Budget allocation: 50% prospecting, 30% retargeting, 20% retention.",
+    optimisation: "Daily bid adjustments, audience segmentation refinement, creative rotation every 7 days, landing page A/B testing, and automated rule-based budget allocation.",
+    results: [
+      "Revenue grew from $63K to $240K per month",
+      "ROAS improved from 2.1x to 4.8x",
+      "CPA decreased by 35% from $45 to $29",
+      "Conversion rate improved from 1.8% to 3.2%",
+      "Customer retention rate increased by 28%",
+    ],
+    beforeAfter: [
+      { label: "Monthly Revenue", before: "$63,000", after: "$240,000" },
+      { label: "ROAS", before: "2.1x", after: "4.8x" },
+      { label: "Cost Per Acquisition", before: "$45", after: "$29" },
+      { label: "Conversion Rate", before: "1.8%", after: "3.2%" },
+    ],
+  },
+  {
+    slug: "local-restaurant-growth",
+    title: "Driving 650+ Monthly Customers for a Local Restaurant on a Lean Budget",
+    client: "Golden Dragon Restaurant",
+    industry: "Food & Beverage",
+    problem: "Golden Dragon was a well-established local restaurant but relied entirely on foot traffic and word-of-mouth. Digital presence was minimal — no Google Business Profile optimization, no Google Ads, and an outdated website. They wanted to compete with newer, trendier restaurants in the area.",
+    research: "Conducted local market analysis of 20 competing restaurants, analysed search volume for local food keywords, and studied customer reviews to understand what drove dining decisions.",
+    audience: "Local diners within 10-mile radius, segmented by dining occasion: casual lunch, family dinner, date night, and takeout. Used demographic targeting for young professionals and families.",
+    campaignStructure: "Google Ads with location targeting (radius around restaurant), call-only ads for reservations, and display ads for brand awareness. Google Business Profile optimized with posts, photos, and Q&A.",
+    creativeStrategy: "High-quality food photography, limited-time offer creatives, customer review highlights, and video content showing the dining experience.",
+    budget: "$3,000/month total digital marketing budget. 70% Google Ads, 20% social media, 10% content.",
+    optimisation: "Weekly keyword performance review, negative keyword expansion, ad schedule adjustments to focus on peak hours, and A/B testing of ad copy with special offers.",
+    results: [
+      "650+ new customers generated per month",
+      "4.2x ROAS on advertising spend",
+      "40% increase in website traffic",
+      "Google Business Profile views increased 280%",
+      "Online reservations grew from 0 to 200+/month",
+    ],
+    beforeAfter: [
+      { label: "Monthly New Customers", before: "50", after: "650+" },
+      { label: "ROAS", before: "N/A", after: "4.2x" },
+      { label: "Profile Views/Month", before: "1,200", after: "4,560" },
+      { label: "Online Reservations", before: "0", after: "200+" },
+    ],
+  },
+]
