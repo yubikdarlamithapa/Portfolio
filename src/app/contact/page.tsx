@@ -4,17 +4,17 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { ContactForm } from "@/components/forms/contact-form"
 import { siteConfig } from "@/lib/data"
-import { Mail, MessageCircle, Calendar, MapPin } from "lucide-react"
+import { Sms, MessageCircle, Calendar, Location, Linkedin, Instagram, Facebook } from "@/lib/iconsax"
 
 const contactInfo = [
-  { icon: Mail, label: "Email", value: siteConfig.email, href: `mailto:${siteConfig.email}` },
+  { icon: Sms, label: "Email", value: siteConfig.email, href: `mailto:${siteConfig.email}` },
   { icon: MessageCircle, label: "WhatsApp", value: siteConfig.whatsapp, href: `https://wa.me/${siteConfig.whatsapp}` },
 ]
 
 const socialLinks = [
-  { label: "LinkedIn", value: siteConfig.social.linkedin.replace("https://", ""), href: siteConfig.social.linkedin },
-  { label: "Instagram", value: `@${siteConfig.social.instagram.split("/").pop()}`, href: siteConfig.social.instagram },
-  { label: "Facebook", value: siteConfig.social.facebook.split("/").pop() || "", href: siteConfig.social.facebook },
+  { icon: Linkedin, label: "LinkedIn", value: siteConfig.social.linkedin.replace("https://", ""), href: siteConfig.social.linkedin },
+  { icon: Instagram, label: "Instagram", value: `@${siteConfig.social.instagram.split("/").pop()}`, href: siteConfig.social.instagram },
+  { icon: Facebook, label: "Facebook", value: siteConfig.social.facebook.split("/").pop() || "", href: siteConfig.social.facebook },
   // { label: "X (Twitter)", value: siteConfig.social.twitter.replace("https://", ""), href: siteConfig.social.twitter },
 ]
 
@@ -73,9 +73,7 @@ export default function ContactPage() {
                   {socialLinks.map((item, i) => (
                     <a key={i} href={item.href} target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 rounded-xl card-premium p-4 transition-all hover:border-accent/20 hover:shadow-md">
                       <div className="rounded-xl bg-accent/10 p-2.5 text-accent transition-colors group-hover:bg-accent group-hover:text-white">
-                        <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <circle cx="12" cy="12" r="10" /><path d="M8 12h8M12 8v8" />
-                        </svg>
+                        <item.icon className="h-5 w-5" />
                       </div>
                       <div>
                         <p className="text-xs text-muted-foreground">{item.label}</p>

@@ -1,7 +1,7 @@
 'use client'
 
 import { motion, type Variants } from 'framer-motion'
-import { ArrowRight, MapPin, BarChart3, TrendingUp, Search, Music2 } from 'lucide-react'
+import { ArrowRight, Location, ChartSquare, TrendUp, SearchNormal, MusicPlay } from '@/lib/iconsax'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -81,7 +81,7 @@ export function Hero() {
         <div className="flex flex-col gap-8 py-20 lg:py-0">
           <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-3">
             <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-xs font-medium text-foreground shadow-sm">
-              <MapPin className="h-3.5 w-3.5 text-accent" />
+              <Location className="h-3.5 w-3.5 text-accent" />
               {siteConfig.location}
             </span>
             <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-xs font-medium text-foreground shadow-sm">
@@ -153,7 +153,7 @@ export function Hero() {
               className="absolute -top-3 -right-3"
             >
               <Badge className="inline-flex items-center gap-1.5 rounded-full border-accent/20 bg-accent/10 px-3 py-1.5 text-xs font-semibold text-accent shadow-lg backdrop-blur-sm">
-                <BarChart3 className="h-3 w-3" />
+                <ChartSquare className="h-3 w-3" />
                 Meta Ads
               </Badge>
             </motion.div>
@@ -164,7 +164,7 @@ export function Hero() {
               className="absolute -bottom-3 -left-3"
             >
               <Badge className="inline-flex items-center gap-1.5 rounded-full border-accent/20 bg-card px-3 py-1.5 text-xs font-semibold text-foreground shadow-lg backdrop-blur-sm">
-                <TrendingUp className="h-3 w-3" />
+                <TrendUp className="h-3 w-3" />
                 Google Ads
               </Badge>
             </motion.div>
@@ -175,7 +175,7 @@ export function Hero() {
               className="absolute -right-14 top-1/3"
             >
               <Badge className="inline-flex items-center gap-1.5 rounded-full border-accent/20 bg-accent/10 px-3 py-1.5 text-xs font-semibold text-accent shadow-lg backdrop-blur-sm">
-                <Search className="h-3 w-3" />
+                <SearchNormal className="h-3 w-3" />
                 SEO
               </Badge>
             </motion.div>
@@ -186,7 +186,7 @@ export function Hero() {
               className="absolute -left-14 bottom-1/3"
             >
               <Badge className="inline-flex items-center gap-1.5 rounded-full border-accent/20 bg-card px-3 py-1.5 text-xs font-semibold text-foreground shadow-lg backdrop-blur-sm">
-                <Music2 className="h-3 w-3" />
+                <MusicPlay className="h-3 w-3" />
                 TikTok Ads
               </Badge>
             </motion.div>

@@ -1,9 +1,9 @@
 'use client'
 
 import * as React from 'react'
-import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
-import { MessageCircle } from 'lucide-react'
+import { Whatsapp } from '@/lib/iconsax'
+import { siteConfig } from '@/lib/data'
 
 export function FloatingCTA() {
   const [visible, setVisible] = React.useState(false)
@@ -26,13 +26,15 @@ export function FloatingCTA() {
           transition={{ duration: 0.3 }}
           className="fixed bottom-6 right-6 z-40"
         >
-          <Link
-            href="/contact"
-            aria-label="Get in touch"
-            className="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-[#c9952c] to-[#d4a853] text-white shadow-lg shadow-[#c9952c]/30 transition-all duration-300 hover:shadow-xl hover:shadow-[#c9952c]/40 hover:scale-105"
+          <a
+            href={`https://wa.me/${siteConfig.whatsapp.replace(/\D/g, '')}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Chat on WhatsApp"
+            className="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-[#25d366] to-[#128c7e] text-white shadow-lg shadow-[#25d366]/30 transition-all duration-300 hover:shadow-xl hover:shadow-[#25d366]/40 hover:scale-105"
           >
-            <MessageCircle className="h-6 w-6" />
-          </Link>
+            <Whatsapp className="h-7 w-7" />
+          </a>
         </motion.div>
       )}
     </AnimatePresence>

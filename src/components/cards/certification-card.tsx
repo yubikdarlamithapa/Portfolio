@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Card, CardContent } from '@/components/ui/card'
-import { Award } from 'lucide-react'
+import { Award } from '@/lib/iconsax'
 import type { Certification } from '@/types'
 
 interface CertificationCardProps {

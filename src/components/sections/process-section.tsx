@@ -2,21 +2,21 @@
 
 import { motion, type Variants } from 'framer-motion'
 import {
-  Search,
-  ClipboardList,
-  Settings,
-  Rocket,
-  RefreshCw,
-  BarChart3,
-  TrendingUp,
-  type LucideIcon,
-} from 'lucide-react'
+  SearchNormal,
+  ClipboardText,
+  Setting2,
+  Airplane,
+  Refresh,
+  ChartSquare,
+  TrendUp,
+  type Icon,
+} from '@/lib/iconsax'
 
 interface ProcessStep {
   number: string
   title: string
   description: string
-  icon: LucideIcon
+  icon: Icon
 }
 
 const steps: ProcessStep[] = [
@@ -24,43 +24,43 @@ const steps: ProcessStep[] = [
     number: '01',
     title: 'Research',
     description: 'Deep dive into your market, competitors, and target audience to identify opportunities.',
-    icon: Search,
+    icon: SearchNormal,
   },
   {
     number: '02',
     title: 'Strategy',
     description: 'Data-backed marketing plan aligned with your business goals and budget.',
-    icon: ClipboardList,
+    icon: ClipboardText,
   },
   {
     number: '03',
     title: 'Campaign Setup',
     description: 'Pixel installation, audience building, creative development, and platform configuration.',
-    icon: Settings,
+    icon: Setting2,
   },
   {
     number: '04',
     title: 'Launch',
     description: 'Go-live with carefully structured campaigns and tracking in place.',
-    icon: Rocket,
+    icon: Airplane,
   },
   {
     number: '05',
     title: 'Optimisation',
     description: 'Daily bid management, A/B testing, audience refinement, and creative rotation.',
-    icon: RefreshCw,
+    icon: Refresh,
   },
   {
     number: '06',
     title: 'Reporting',
     description: 'Transparent weekly reports with actionable insights and KPI tracking.',
-    icon: BarChart3,
+    icon: ChartSquare,
   },
   {
     number: '07',
     title: 'Scaling',
     description: 'Scale winning campaigns, expand audiences, and increase budget efficiently.',
-    icon: TrendingUp,
+    icon: TrendUp,
   },
 ]
 

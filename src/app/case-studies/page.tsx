@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { CTASection } from "@/components/sections/cta-section"
 import { caseStudies } from "@/lib/data"
-import { ArrowRight, TrendingUp } from "lucide-react"
+import { ArrowRight, TrendUp } from "@/lib/iconsax"
 
 export default function CaseStudiesPage() {
   return (
@@ -47,7 +47,7 @@ export default function CaseStudiesPage() {
                             <div className="flex flex-wrap gap-4">
                               {(study.finalResults ?? study.results ?? []).slice(0, 2).map((result, j) => (
                                 <span key={j} className="flex items-center gap-1 text-sm font-medium text-accent">
-                                  <TrendingUp className="h-3 w-3" /> {result}
+                                  <TrendUp className="h-3 w-3" /> {result}
                                 </span>
                               ))}
                             </div>

@@ -1,13 +1,13 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Building2, Award, Monitor, BadgeCheck } from 'lucide-react'
+import { Building, Award, Monitor, Verify } from '@/lib/iconsax'
 
 import { clients, industries, certifications } from '@/lib/data'
 
 const items = [
   {
-    icon: Building2,
+    icon: Building,
     label: 'Clients Worked With',
     value: clients.length,
     list: clients,
@@ -25,7 +25,7 @@ const items = [
     list: certifications.map((c) => c.title || c.name || ''),
   },
   {
-    icon: BadgeCheck,
+    icon: Verify,
     label: 'Marketing Platforms',
     value: 6,
     list: ['Meta Ads', 'Google Ads', 'LinkedIn Ads', 'TikTok Ads', 'Google Analytics', 'HubSpot'],
@@ -56,31 +56,40 @@ export function TrustSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="rounded-2xl border bg-card p-6"
+              className="group relative overflow-hidden rounded-2xl border border-border/60 bg-card p-6 transition-all duration-300 hover:-translate-y-1.5 hover:border-accent/30 hover:shadow-xl hover:shadow-accent/5"
             >
-              <div className="mb-4 flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
-                  <item.icon className="size-5 text-primary" />
+              <div className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-transparent via-accent/50 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+              <div className="pointer-events-none absolute -top-16 -right-16 h-32 w-32 rounded-full bg-accent/10 blur-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+
+              <div className="relative">
+                <div className="mb-5 flex items-center gap-3">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-primary/10 to-accent/10 text-primary ring-1 ring-accent/20 transition-all duration-300 group-hover:from-accent group-hover:to-accent/80 group-hover:text-white group-hover:shadow-lg group-hover:shadow-accent/20">
+                    <item.icon className="size-5" />
+                  </div>
+                  <span className="text-sm font-semibold text-muted-foreground">
+                    {item.label}
+                  </span>
                 </div>
-                <span className="text-sm font-medium text-muted-foreground">
-                  {item.label}
-                </span>
-              </div>
-              <p className="mb-3 text-3xl font-bold">{item.value}+</p>
-              <div className="flex flex-wrap gap-1.5">
-                {item.list.filter(Boolean).slice(0, 4).map((name) => (
-                  <span
-                    key={name}
-                    className="rounded-full bg-muted px-2.5 py-0.5 text-xs text-muted-foreground"
-                  >
-                    {name!.length > 20 ? `${name!.slice(0, 20)}...` : name}
-                  </span>
-                ))}
-                {item.list.length > 4 && (
-                  <span className="rounded-full bg-muted px-2.5 py-0.5 text-xs text-muted-foreground">
-                    +{item.list.length - 4} more
-                  </span>
-                )}
+
+                <p className="mb-4 text-4xl font-extrabold tracking-tight gradient-text">
+                  {item.value}+
+                </p>
+
+                <div className="flex flex-wrap gap-1.5">
+                  {item.list.filter(Boolean).slice(0, 4).map((name) => (
+                    <span
+                      key={name}
+                      className="rounded-full border border-border bg-muted/50 px-2.5 py-1 text-xs font-medium text-muted-foreground transition-colors duration-300 group-hover:border-accent/25 group-hover:text-foreground"
+                    >
+                      {name!.length > 20 ? `${name!.slice(0, 20)}...` : name}
+                    </span>
+                  ))}
+                  {item.list.length > 4 && (
+                    <span className="rounded-full bg-accent/10 px-2.5 py-1 text-xs font-semibold text-accent">
+                      +{item.list.length - 4} more
+                    </span>
+                  )}
+                </div>
               </div>
             </motion.div>
           ))}
@@ -99,7 +108,7 @@ export function TrustSection() {
                 key={`${client}-${i}`}
                 className="flex shrink-0 items-center gap-2 text-sm font-medium text-muted-foreground"
               >
-                <Building2 className="size-4" />
+                <Building className="size-4" />
                 {client}
               </span>
             ))}

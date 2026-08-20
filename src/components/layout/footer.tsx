@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import Link from "next/link"
-import { ArrowUp, Mail, Phone, MapPin } from "lucide-react"
+import { ArrowUp, Sms, Call, Location } from "@/lib/iconsax"
 import { siteConfig, services } from "@/lib/data"
 import { SocialLinks } from "@/components/common/social-links"
 
@@ -82,7 +82,7 @@ export function Footer() {
                   href={`mailto:${siteConfig.email}`}
                   className="inline-flex items-center gap-2 text-sm text-[#8888a0] transition-colors hover:text-[#f0efe6]"
                 >
-                  <Mail className="h-4 w-4 shrink-0 text-[#d4a853]" />
+                  <Sms className="h-4 w-4 shrink-0 text-[#d4a853]" />
                   <span>{siteConfig.email}</span>
                 </a>
               </li>
@@ -91,12 +91,12 @@ export function Footer() {
                   href={`tel:${siteConfig.phone}`}
                   className="inline-flex items-center gap-2 text-sm text-[#8888a0] transition-colors hover:text-[#f0efe6]"
                 >
-                  <Phone className="h-4 w-4 shrink-0 text-[#d4a853]" />
+                  <Call className="h-4 w-4 shrink-0 text-[#d4a853]" />
                   <span>{siteConfig.phone}</span>
                 </a>
               </li>
               <li className="inline-flex items-center gap-2 text-sm text-[#8888a0]">
-                <MapPin className="h-4 w-4 shrink-0 text-[#d4a853]" />
+                <Location className="h-4 w-4 shrink-0 text-[#d4a853]" />
                 <span>{siteConfig.location}</span>
               </li>
             </ul>
@@ -107,6 +107,17 @@ export function Footer() {
           <p className="text-xs text-[#8888a0]">
             &copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
           </p>
+          {/* <p className="text-xs text-[#8888a0]">
+            Built by{" "}
+            <a
+              href="https://bhupendrathapachhetri.com.np"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#d4a853] font-medium transition-colors hover:text-[#f0efe6] hover:underline"
+            >
+              Bhupendra Thapa Chhetri
+            </a>
+          </p> */}
           <button
             onClick={scrollToTop}
             className="inline-flex items-center gap-2 text-xs text-[#8888a0] transition-colors hover:text-[#d4a853]"

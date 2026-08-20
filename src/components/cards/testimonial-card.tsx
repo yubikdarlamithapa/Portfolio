@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Star, Quote } from "lucide-react"
+import { Star, QuoteDown } from "@/lib/iconsax"
 import { cn } from "@/lib/utils"
 
 interface TestimonialData {
@@ -30,7 +30,7 @@ export default function TestimonialCard({ testimonial, index = 0 }: TestimonialC
       whileHover={{ y: -2, boxShadow: "0 12px 24px rgba(0,0,0,0.08)" }}
       className="rounded-xl border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-900"
     >
-      <Quote className="mb-4 h-8 w-8 text-blue-200 dark:text-blue-800" />
+      <QuoteDown className="mb-4 h-8 w-8 text-blue-200 dark:text-blue-800" />
       <p className="mb-4 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">{review}</p>
       <div className="mb-4 flex gap-0.5">
         {Array.from({ length: 5 }).map((_, i) => (

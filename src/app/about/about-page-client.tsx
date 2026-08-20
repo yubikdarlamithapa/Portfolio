@@ -1,6 +1,6 @@
 'use client'
 
-import { Download, Award, BookOpen, Briefcase, Target } from 'lucide-react'
+import { DirectDown, Award, Book1, Briefcase, Flag2 } from '@/lib/iconsax'
 import { Card } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -28,40 +28,67 @@ export function AboutPageClient() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-2">
             <MotionWrapper variant="slide-in-left" className="space-y-6">
-              <SectionHeading title="Biography" description="The story behind the marketer" align="left" />
+              <SectionHeading
+                title="Biography"
+                description="The story behind the marketer"
+                align="left"
+              />
+
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  With over 4 years of experience in digital marketing, I&apos;ve helped businesses
-                  across e-commerce, real estate, hospitality, and technology sectors achieve
-                  measurable growth through data-driven strategies.
+                  I successfully completed my Bachelor of Computer Application (BCA) in
+                  2026, developing a strong foundation in technology, problem-solving,
+                  and digital systems. During my academic journey, I also developed a
+                  strong interest in digital marketing and online business growth.
                 </p>
+
                 <p>
-                  My journey began in analytics, where I developed a deep appreciation for the
-                  power of data in decision-making. This foundation evolved into expertise in
-                  paid advertising, SEO, content strategy, and AI-powered marketing.
+                  My technical background has helped me understand how technology,
+                  analytics, websites, and digital platforms work together. I have
+                  continued to develop my skills in social media marketing, SEO, content
+                  strategy, paid advertising, and AI-powered marketing.
                 </p>
+
                 <p>
-                  Today, I specialize in Meta Ads and Google Ads, managing substantial ad spend
-                  while delivering consistent 3x+ ROAS for my clients.
+                  Today, I am continuing my career as a digital marketing professional,
+                  combining my BCA background with modern marketing strategies to help
+                  businesses improve their online presence, reach the right audience,
+                  and achieve measurable growth.
                 </p>
               </div>
             </MotionWrapper>
 
             <MotionWrapper variant="slide-in-right" className="space-y-6">
               <SectionHeading title="Marketing Philosophy" align="left" />
+
               <div className="space-y-4">
                 {[
-                  { icon: Target, title: 'Data-First Approach', desc: 'Every decision is backed by data. No guesswork, just proven strategies.' },
-                  { icon: BookOpen, title: 'Continuous Learning', desc: 'Digital marketing evolves daily. I stay ahead of trends and algorithm changes.' },
-                  { icon: Briefcase, title: 'ROI Obsession', desc: 'Every campaign exists to drive business results, not vanity metrics.' },
+                  {
+                    icon: Flag2,
+                    title: 'Data-Driven Marketing',
+                    desc: 'I use data and analytics to understand audiences, measure performance, and make smarter marketing decisions.',
+                  },
+                  {
+                    icon: Book1,
+                    title: 'Continuous Learning',
+                    desc: 'Digital marketing is constantly evolving, so I continuously learn new tools, platforms, trends, and strategies.',
+                  },
+                  {
+                    icon: Briefcase,
+                    title: 'Business-Focused Results',
+                    desc: 'Marketing should create real business value by improving visibility, engagement, leads, and long-term growth.',
+                  },
                 ].map((item) => (
                   <div key={item.title} className="flex gap-4">
                     <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
                       <item.icon className="h-5 w-5" />
                     </div>
+
                     <div>
                       <h3 className="font-semibold">{item.title}</h3>
-                      <p className="text-sm text-muted-foreground">{item.desc}</p>
+                      <p className="text-sm text-muted-foreground">
+                        {item.desc}
+                      </p>
                     </div>
                   </div>
                 ))}
@@ -120,7 +147,7 @@ export function AboutPageClient() {
           <SectionHeading title="Download My Resume" description="Get the full picture of my experience and skills" />
           <Button variant="primary" size="lg" asChild>
             <a href="#" download>
-              <Download className="mr-2 h-4 w-4" />
+              <DirectDown className="mr-2 h-4 w-4" />
               Download Resume (PDF)
             </a>
           </Button>
