@@ -7,7 +7,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { CTASection } from "@/components/sections/cta-section"
 import { blogPosts } from "@/lib/data"
-import { Calendar, Clock, ArrowRight } from "lucide-react"
+import { Calendar, Clock, ArrowRight } from "@/lib/iconsax"
 
 const categories = ["All", ...new Set(blogPosts.map((p) => p.category))]
 

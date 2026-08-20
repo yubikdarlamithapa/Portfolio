@@ -4,7 +4,7 @@ import * as React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { AnimatePresence } from 'framer-motion'
-import { Menu, X } from 'lucide-react'
+import { Menu, CloseSquare } from '@/lib/iconsax'
 
 import { Button } from '@/components/ui/button'
 import { ThemeToggle } from '@/components/common/theme-toggle'
@@ -102,7 +102,7 @@ export function Header() {
               className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-foreground transition-colors hover:bg-muted"
               aria-label={isMobileOpen ? 'Close menu' : 'Open menu'}
             >
-              {isMobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              {isMobileOpen ? <CloseSquare className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </button>
           </div>
         </div>

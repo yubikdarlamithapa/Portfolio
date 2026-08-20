@@ -8,7 +8,7 @@ import emailjs from "@emailjs/browser"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Input, Textarea } from "@/components/ui/input"
-import { Loader2, CheckCircle2 } from "lucide-react"
+import { Refresh, TickCircle } from "@/lib/iconsax"
 
 const contactSchema = z.object({
   name: z.string().min(1, "Name is required"),
@@ -77,7 +77,7 @@ export function ContactForm({ className }: ContactFormProps) {
     return (
       <div className={cn("flex flex-col items-center justify-center py-16 text-center", className)}>
         <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mb-4">
-          <CheckCircle2 className="h-8 w-8 text-accent" />
+          <TickCircle className="h-8 w-8 text-accent" />
         </div>
         <h3 className="text-2xl font-bold mb-2">Message Sent!</h3>
         <p className="text-muted-foreground max-w-sm">
@@ -166,7 +166,7 @@ export function ContactForm({ className }: ContactFormProps) {
       <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
         {isSubmitting ? (
           <>
-            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+            <Refresh className="mr-2 h-4 w-4 animate-spin" />
             Sending...
           </>
         ) : (

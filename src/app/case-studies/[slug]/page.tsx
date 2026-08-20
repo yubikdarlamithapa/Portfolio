@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import { CTASection } from "@/components/sections/cta-section"
 import { caseStudies } from "@/lib/data"
-import { ArrowLeft, ArrowRight, TrendingUp, BarChart3 } from "lucide-react"
+import { ArrowLeft, ArrowRight, TrendUp, ChartSquare } from "@/lib/iconsax"
 
 export function generateStaticParams() {
   return caseStudies
@@ -15,8 +15,9 @@ export function generateStaticParams() {
     .map((c) => ({ slug: c.id }))
 }
 
-export default function CaseStudyDetailPage({ params }: { params: { slug: string } }) {
-  const study = caseStudies.find((c) => c.id === params.slug)
+export default async function CaseStudyDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const study = caseStudies.find((c) => c.id === slug)
   if (!study) notFound()
 
   const displayResults = study.finalResults ?? study.results ?? []
@@ -98,7 +99,7 @@ export default function CaseStudyDetailPage({ params }: { params: { slug: string
                           <p className="text-xs text-muted-foreground mb-1">Before</p>
                           <p className="text-lg font-semibold text-muted-foreground line-through">{item.before}</p>
                         </div>
-                        <TrendingUp className="h-5 w-5 text-accent mx-2" />
+                        <TrendUp className="h-5 w-5 text-accent mx-2" />
                         <div className="text-center flex-1">
                           <p className="text-xs text-muted-foreground mb-1">After</p>
                           <p className="text-lg font-semibold gradient-text">{item.after}</p>
@@ -122,7 +123,7 @@ export default function CaseStudyDetailPage({ params }: { params: { slug: string
                 <Card className="h-full">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-3">
-                      <TrendingUp className="h-5 w-5 text-accent shrink-0 mt-1" />
+                      <TrendUp className="h-5 w-5 text-accent shrink-0 mt-1" />
                       <p className="text-muted-foreground">{result}</p>
                     </div>
                   </CardContent>
@@ -139,7 +140,7 @@ export default function CaseStudyDetailPage({ params }: { params: { slug: string
             <h2 className="text-2xl font-bold mb-6">Charts & Visualisations</h2>
             <div className="aspect-video rounded-2xl bg-gradient-to-br from-primary/5 to-accent/5 flex items-center justify-center">
               <div className="text-center p-8">
-                <BarChart3 className="h-16 w-16 text-primary/30 mx-auto mb-4" />
+                <ChartSquare className="h-16 w-16 text-primary/30 mx-auto mb-4" />
                 <p className="text-muted-foreground">Performance charts and visualisations placeholder</p>
               </div>
             </div>

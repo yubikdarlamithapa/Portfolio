@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Calendar, SendHorizonal, Sparkles } from 'lucide-react'
+import { Calendar, Send2, MagicStar } from '@/lib/iconsax'
 import Link from 'next/link'
 
 import { Button } from '@/components/ui/button'
@@ -24,9 +24,9 @@ export function CTASection() {
           </div>
 
           <div className="mx-auto flex max-w-2xl flex-col items-center gap-6">
-            <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10">
+            {/* <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10">
               <Sparkles className="size-8 text-primary" />
-            </div>
+            </div> */}
 
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
               Ready to grow your business?
@@ -38,15 +38,15 @@ export function CTASection() {
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-3">
-              <Button size="lg" asChild>
+              {/* <Button size="lg" asChild>
                 <a href={siteConfig.calendly} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5">
                   <Calendar className="h-4 w-4 shrink-0" />
                   Schedule Meeting
                 </a>
-              </Button>
+              </Button> */}
               <Button variant="outline" size="lg" asChild>
                 <Link href="/contact" className="inline-flex items-center gap-1.5">
-                  <SendHorizonal className="h-4 w-4 shrink-0" />
+                  <Send2 className="h-4 w-4 shrink-0" />
                   Contact Me
                 </Link>
               </Button>

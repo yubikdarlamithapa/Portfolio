@@ -2,7 +2,7 @@ import { Testimonial } from "@/types"
 
 export const testimonials: Testimonial[] = [
   {
-    name: "Sarah Johnson",
+    name: "Urban Motors",
     role: "CEO",
     company: "TrendyThreads Fashion",
     review: "Working with this team transformed our online presence. Our Meta Ads ROAS went from 2.1x to 4.8x in just 3 months. The data-driven approach and creative strategies made all the difference.",

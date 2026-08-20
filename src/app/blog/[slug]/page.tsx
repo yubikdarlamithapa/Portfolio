@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import { CTASection } from "@/components/sections/cta-section"
 import { blogPosts } from "@/lib/data"
-import { ArrowLeft, ArrowRight, Calendar, Clock, Tag } from "lucide-react"
+import { ArrowLeft, ArrowRight, Calendar, Clock, Tag } from "@/lib/iconsax"
 
 export function generateStaticParams() {
   return blogPosts.map((p) => ({ slug: p.slug }))

@@ -7,14 +7,33 @@ import { Card, CardContent } from "@/components/ui/card"
 import { CTASection } from "@/components/sections/cta-section"
 import CertificationCard from "@/components/cards/certification-card"
 import { siteConfig, certifications, timelineEvents } from "@/lib/data"
-import { Download, Award, Calendar, Quote, ArrowRight } from "lucide-react"
+import { DirectDown, Award, Calendar, QuoteDown, ArrowRight } from "@/lib/iconsax"
 
 const philosophy = [
-  { title: "Data-Driven Creativity", description: "Every creative decision is backed by data. I believe the best marketing combines artistic storytelling with analytical rigour. Numbers tell us what works; creativity makes it memorable." },
-  { title: "Continuous Optimisation", description: "Marketing is never 'done'. I treat every campaign as a living experiment — constantly testing, learning, and iterating. Small incremental gains compound into remarkable results." },
-  { title: "Audience-First Thinking", description: "Understanding the human behind the click is everything. I build strategies around audience psychology, pain points, and aspirations — not just demographics and interests." },
-  { title: "Transparency & Trust", description: "Clients deserve to understand exactly where their money is going and what it's achieving. I provide clear reporting, honest communication, and realistic expectations from day one." },
-]
+  {
+    title: "Data-Driven Creativity",
+    description:
+      "I combine my technical background with creative thinking to build marketing strategies based on data, audience insights, and measurable performance."
+  },
+
+  {
+    title: "Continuous Learning",
+    description:
+      "Digital marketing is constantly evolving. I continuously explore new platforms, AI tools, advertising strategies, and industry trends to keep improving my skills."
+  },
+
+  {
+    title: "Audience-First Thinking",
+    description:
+      "Effective marketing starts with understanding people. I focus on audience needs, interests, challenges, and behavior to create more relevant and engaging campaigns."
+  },
+
+  {
+    title: "Transparency & Trust",
+    description:
+      "I believe professional marketing should be built on clear communication and honest reporting. Every strategy should have clear objectives, measurable progress, and realistic expectations."
+  }
+];
 
 export default function AboutPage() {
   return (
@@ -69,15 +88,44 @@ export default function AboutPage() {
               </div>
             </FadeIn>
             <div className="space-y-6">
-              <FadeIn><h2 className="text-3xl font-bold">The Journey So Far</h2></FadeIn>
-              <FadeIn><p className="text-muted-foreground leading-relaxed">My marketing journey began in 2017 when I graduated with a degree in Marketing Management. What started as a curiosity about how brands connect with people quickly became an obsession with the science of digital advertising.</p></FadeIn>
-              <FadeIn><p className="text-muted-foreground leading-relaxed">Over the past 7 years, I&apos;ve managed over $500K in monthly ad spend, generated 15,000+ leads, and helped 75+ businesses achieve measurable growth. From local restaurants to e-commerce brands, every client has taught me something new about the ever-evolving digital landscape.</p></FadeIn>
-              <FadeIn><p className="text-muted-foreground leading-relaxed">Today, I specialise in AI-powered marketing — leveraging machine learning and predictive analytics to optimise campaigns in real-time. I&apos;m certified across Meta, Google, HubSpot, and TikTok, and I bring that expertise to every project I take on.</p></FadeIn>
+              <FadeIn>
+                <h2 className="text-3xl font-bold">The Journey So Far</h2>
+              </FadeIn>
+
+              <FadeIn>
+                <p className="text-muted-foreground leading-relaxed">
+                  My journey began with a strong interest in technology, business, and digital
+                  communication. In 2026, I successfully completed my Bachelor of Computer
+                  Application (BCA), building a solid foundation in technology, problem-solving,
+                  and digital systems.
+                </p>
+              </FadeIn>
+
+              <FadeIn>
+                <p className="text-muted-foreground leading-relaxed">
+                  Alongside my academic journey, I developed a strong passion for digital
+                  marketing. I have continued to build my professional skills in social media
+                  marketing, SEO, paid advertising, content strategy, and brand growth, helping
+                  businesses build a stronger presence in the digital world.
+                </p>
+              </FadeIn>
+
+              <FadeIn>
+                <p className="text-muted-foreground leading-relaxed">
+                  Today, I continue to grow as a digital marketing professional, combining my
+                  technical background in BCA with modern marketing strategies and AI-powered
+                  tools. My goal is to create data-driven campaigns, improve online visibility,
+                  and help businesses achieve sustainable digital growth.
+                </p>
+              </FadeIn>
+
               {/* <FadeIn>
-                <Button asChild>
-                  <Link href="#"><Download className="mr-2 h-4 w-4" /> Download Resume</Link>
-                </Button>
-              </FadeIn> */}
+    <Button asChild>
+      <Link href="#">
+        <DirectDown className="mr-2 h-4 w-4" /> Download Resume
+      </Link>
+    </Button>
+  </FadeIn> */}
             </div>
           </div>
         </div>
@@ -94,7 +142,7 @@ export default function AboutPage() {
               <FadeIn key={i}>
                 <Card className="card-premium h-full">
                   <CardContent className="p-6">
-                    <Quote className="h-5 w-5 text-accent mb-3" />
+                    <QuoteDown className="h-5 w-5 text-accent mb-3" />
                     <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
                     <p className="text-muted-foreground">{item.description}</p>
                   </CardContent>

@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import CertificationCard from "@/components/cards/certification-card"
 import { CTASection } from "@/components/sections/cta-section"
 import { skills, certifications } from "@/lib/data"
-import { Star, Globe } from "lucide-react"
+import { Star, Global } from "@/lib/iconsax"
 
 const softSkills = [
   "Strategic Thinking", "Client Communication", "Project Management",
@@ -107,7 +107,7 @@ export default function SkillsPage() {
                 <FadeIn key={i}>
                   <Card className="card-premium text-center">
                     <CardContent className="p-6">
-                      <Globe className="h-8 w-8 text-accent mx-auto mb-3" />
+                      <Global className="h-8 w-8 text-accent mx-auto mb-3" />
                       <h3 className="font-semibold">{lang.name}</h3>
                       <p className="text-sm text-muted-foreground">{lang.level}</p>
                     </CardContent>

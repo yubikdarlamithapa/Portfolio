@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowRight, Briefcase, GraduationCap, Award } from 'lucide-react'
+import { ArrowRight, Briefcase, Teacher, Award } from '@/lib/iconsax'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -10,7 +10,7 @@ import { siteConfig } from '@/lib/data'
 
 const highlights = [
   { icon: Briefcase, text: '2+ years in digital marketing' },
-  { icon: GraduationCap, text: 'Managed $5M+ in ad spend' },
+  { icon: Teacher, text: 'Managed $5M+ in ad spend' },
   { icon: Award, text: 'Meta & Google certified' },
 ]
 

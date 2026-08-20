@@ -7,6 +7,8 @@ import PortfolioCard from "@/components/cards/portfolio-card"
 import { CTASection } from "@/components/sections/cta-section"
 import { portfolioItems } from "@/lib/data"
 import { Badge } from "@/components/ui/badge"
+import { Filter } from "@/lib/iconsax"
+import { cn } from "@/lib/utils"
 
 const categories = ["All", ...new Set(portfolioItems.map((item) => item.category))]
 
@@ -26,7 +28,7 @@ export default function PortfolioPage() {
             <div className="max-w-3xl mx-auto text-center">
               <Badge variant="primary" className="mb-4">My Work</Badge>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4">
-                Portfolio
+                My <span className="gradient-text">Portfolio</span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 Real campaigns, real results. Browse through my portfolio of data-driven marketing projects across industries and platforms.
@@ -36,19 +38,21 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      <section className="section-padding">
+      <section className="section-padding pt-0">
         <div className="container-premium">
           <FadeIn>
             <div className="flex flex-wrap justify-center gap-2 mb-12">
+              <Filter className="mr-1 size-4 text-muted-foreground" />
               {categories.map((cat) => (
                 <button
                   key={cat}
                   onClick={() => setActiveCategory(cat)}
-                  className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                  className={cn(
+                    "rounded-full px-5 py-2 text-sm font-medium transition-all duration-300",
                     activeCategory === cat
-                      ? "bg-accent text-white shadow-md shadow-accent/20"
-                      : "border border-border text-muted-foreground hover:border-accent/30 hover:text-accent bg-transparent"
-                  }`}
+                      ? "bg-gradient-to-r from-primary to-accent text-white shadow-lg shadow-accent/20"
+                      : "border border-border/60 bg-muted/50 text-muted-foreground hover:border-accent/30 hover:text-foreground"
+                  )}
                 >
                   {cat}
                 </button>
